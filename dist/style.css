@@ -27,6 +27,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
 }
 
 div.about {
@@ -36,7 +37,6 @@ div.about {
   justify-content: center;
   align-items: center;
   position: relative;
-  z-index: 1;
 }
 
 div.about-image {
@@ -77,6 +77,97 @@ div.about-image h1 {
 
 .about-info p {
   font-size: 1.2rem;
+}
+
+@media (max-width: 500px) {
+  header {
+    width: 100%;
+  }
+  .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20rem;
+  }
+
+  div.about-image {
+    min-width: 80%;
+    min-height: 40rem;
+    margin: 0;
+  }
+
+  div.about-image img {
+    min-width: 100%;
+  }
+
+  div.about-info {
+    width: 100%;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .contact-info .socials {
+  }
+}
+
+@media ((min-width: 500px) and (max-width: 1000px)) {
+  header {
+    width: 100%;
+  }
+  div.about {
+    min-width: 80%;
+    position: relative;
+  }
+
+  div.about-image {
+    position: absolute;
+    left: 44%;
+    height: 30rem;
+    min-width: 24rem;
+    z-index: 1;
+  }
+  div.about-image img {
+    min-width: 100%;
+  }
+
+  div.about-info {
+    position: absolute;
+    margin-bottom: -10rem;
+    width: 40%;
+    left: 0%;
+  }
+
+  div.about-info h1 {
+    font-size: 2rem;
+  }
+
+  div.about-info p {
+    font-size: 0.9rem;
+  }
+
+  .contact > img {
+    width: 40%;
+  }
+
+  .contact-info h1 {
+    font-size: 2rem;
+  }
+
+  .contact-info p {
+    font-size: 1rem;
+  }
 }
 
 .socials {
@@ -120,7 +211,7 @@ main h1 {
   max-width: 80%;
 }
 
-@media (max-width: 1000px) {
+@media ((min-width: 500px) and (max-width: 1000px)) {
   .projects {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -222,12 +313,24 @@ footer {
   color: white;
 }
 
-.contact {
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  gap: 10%;
-  font-size: 1.2rem;
+@media (min-width: 1000px) {
+  .contact {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .contact {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    font-size: 1.2rem;
+  }
 }
 
 .contact-info h1 {
